@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Burger House — Click &amp; Collect</title>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- EN-TÊTE : NAVIGATION & HERO -->
+    <header class="entete">
+      <nav class="nav" aria-label="Navigation principale">
+        <a class="nav-logo-lien" href="#" aria-label="Accueil Burger House">
+          <picture>
+            <source media="(min-width: 1024px)" srcset="images/Logo-burger-house.svg">
+            <img class="nav-logo" src="images/picto-burger-house.svg" alt="Burger House" width="40" height="40">
+          </picture>
+        </a>
+
+        <div class="nav-droite">
+          <div class="nav-commande-texte">
+            <img src="images/ico-bag-clickAndCollect.svg" alt="" width="20" height="20">
+            <span>Commandez votre repas en ligne</span>
+          </div>
+          <div class="nav-boutons">
+            <a class="btn-nav btn-inscription" href="#">Inscription</a>
+            <a class="btn-nav btn-connexion" href="#">Connexion</a>
+          </div>
+        </div>
+      </nav>
+
+      <section class="hero">
+        <div class="hero-texte">
+          <p class="hero-accroche">C'est le moment de goûter au bon goût des hamburgers</p>
+          <h1 class="hero-titre">
+            <span class="titre-burger">Burger</span>
+            <span class="titre-house">House</span>
+            <span class="titre-collect">Click <span class="rouge">&amp;</span> collect</span>
+          </h1>
+          <a class="bouton-hero" href="#menu">Créer un compte</a>
+        </div>
+        <img class="hero-burger" src="images/burger-hero-top.png" alt="Un burger au fromage, des frites et une boisson" width="788" height="812">
+      </section>
+    </header>
+
+    <!-- CONTENU PRINCIPAL -->
+    <main>
+      <!-- 1. BURGERS POPULAIRES -->
+      <section class="populaires" aria-labelledby="titre-populaires">
+        <h2 id="titre-populaires" class="sr-only">Nos burgers populaires</h2>
+        <div class="grille-populaires">
+          <article class="carte-populaire carte-populaire-1">
+            <div class="populaire-contenu">
+              <span class="populaire-soustitre">Killer Burger</span>
+              <h3 class="populaire-titre">Le burger le plus populaire</h3>
+            </div>
+          </article>
+
+          <article class="carte-populaire carte-populaire-2">
+            <div class="populaire-contenu">
+              <span class="populaire-soustitre">Island Burger</span>
+              <h3 class="populaire-titre">Plus de plaisir, plus de goût</h3>
+            </div>
+          </article>
+
+          <article class="carte-populaire carte-populaire-3">
+            <div class="populaire-contenu">
+              <span class="populaire-soustitre">Orland's Burger</span>
+              <h3 class="populaire-titre">Frais &amp; pimenté</h3>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 2. LE MENU -->
+      <section class="menu" id="menu" aria-labelledby="titre-menu">
+        <div class="menu-entete">
+          <span class="etiquette-jaune">Toujours des délicieux burgers</span>
+          <h2 id="titre-menu" class="titre-section">Choisissez et savourez</h2>
+          <p class="menu-intro">
+            Chez Burger House, chaque burger est préparé minute avec des ingrédients frais et du pain brioché maison.
+            Viande de bœuf grillée, légumes croquants et sauces maison : on assemble la gourmandise, vous savourez le résultat.
+          </p>
+        </div>
+
+        <div class="grille-menu">
+          <article class="carte-plat">
+            <img class="plat-img" src="images/Product-1.jpg" alt="Classic Burger au steak de bœuf et cheddar fondant" width="600" height="600" loading="lazy">
+            <h3 class="plat-nom">Classic Burger</h3>
+            <p class="plat-desc">Steak de bœuf grillé, cheddar fondant, salade croquante et notre sauce maison, dans un pain brioché tout juste sorti du four.</p>
+            <a class="bouton-commande" href="#">Commandez</a>
+          </article>
+
+          <article class="carte-plat">
+            <img class="plat-img" src="images/Product-2.jpg" alt="Spicy Chicken pané croustillant et sauce pimentée" width="600" height="600" loading="lazy">
+            <h3 class="plat-nom">Spicy Chicken</h3>
+            <p class="plat-desc">Filet de poulet pané croustillant, sauce pimentée maison et crudités fraîches pour les amateurs de sensations relevées.</p>
+            <a class="bouton-commande" href="#">Commandez</a>
+          </article>
+
+          <article class="carte-plat">
+            <img class="plat-img" src="images/Product-3.jpg" alt="Veggie Délice avec galette de légumes et avocat" width="600" height="600" loading="lazy">
+            <h3 class="plat-nom">Veggie Délice</h3>
+            <p class="plat-desc">Galette de légumes grillée, avocat, tomate confite et sauce yaourt citronnée, pour une pause gourmande et légère.</p>
+            <a class="bouton-commande" href="#">Commandez</a>
+          </article>
+        </div>
+      </section>
+
+      <!-- 3. ÉVÉNEMENT -->
+      <section class="evenement" aria-labelledby="titre-evenement">
+        <div class="carte-evenement">
+          <div class="evenement-texte">
+            <span class="evenement-etiquette">Événement à venir</span>
+            <h2 id="titre-evenement" class="evenement-titre">Vivez la demi-finale</h2>
+            <p class="evenement-desc">
+              Vivez la demi-finale en direct sur grand écran chez Burger House à Yopougon !
+              Ambiance conviviale, menu burger-frites-boisson à prix spécial et animations toute la soirée.
+              Réservez votre table dès maintenant, les places partent vite.
+            </p>
+          </div>
+          <img class="evenement-img" src="images/evenement.webp" alt="Ambiance festive devant un match et burgers" width="560" height="380" loading="lazy">
+        </div>
+      </section>
+
+      <!-- 4. RÉSERVATION -->
+      <section class="reservation" id="reservation" aria-labelledby="titre-reservation">
+        <div class="reservation-conteneur">
+          <div class="reservation-entete">
+            <span class="reservation-surtitre">Réservation</span>
+            <h2 id="titre-reservation" class="reservation-titre">Réservez votre table</h2>
+          </div>
+
+          <form class="formulaire-reservation" action="#" method="POST">
+            <div class="champ-groupe">
+              <label for="nom">Nom complet</label>
+              <input type="text" id="nom" name="nom" placeholder="Kader" required>
+            </div>
+
+            <div class="champ-groupe">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" placeholder="exemple@gmail.com" required>
+            </div>
+
+            <div class="champ-groupe">
+              <label for="date">Date</label>
+              <input type="date" id="date" name="date" required>
+            </div>
+
+            <div class="champ-groupe">
+              <label for="heure">Heure</label>
+              <input type="time" id="heure" name="heure" required>
+            </div>
+
+            <div class="champ-groupe">
+              <label for="personnes">Nombre de personnes</label>
+              <input type="number" id="personnes" name="personnes" min="1" max="20" placeholder="2" required>
+            </div>
+
+            <div class="champ-groupe champ-bouton">
+              <button type="submit" class="bouton-reserver">Trouver une table</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- PIED DE PAGE -->
+    <footer class="footer">
+      <div class="footer-fond">
+        <div class="footer-contenu">
+          <div class="footer-colonne footer-presentation">
+            <img class="footer-logo" src="images/Logo-burger-house-white.svg" alt="Burger House" width="220" height="60" loading="lazy">
+            <p class="footer-texte">
+              Burger House est votre adresse gourmande à Yopougon, Abidjan. Chaque jour, nous préparons des burgers faits maison avec des produits frais et locaux, à savourer sur place, à emporter ou en click &amp; collect.
+            </p>
+          </div>
+
+          <div class="footer-colonne footer-coordonnees">
+            <p class="coordonnee-ligne">Yopougon Toit Rouge, rue M37</p>
+            <p class="coordonnee-ligne"><a href="mailto:contact@burgerhouse.ci">contact@burgerhouse.ci</a></p>
+          </div>
+        </div>
+
+        <div class="footer-bas">
+          <p class="copyright">&copy; Burger House 2026. Tous droits réservés.</p>
+          <div class="footer-reseaux">
+            <a class="lien-reseau" href="https://instagram.com" aria-label="Burger House sur Instagram" target="_blank" rel="noopener">
+              <img src="images/lets-icons_insta.svg" alt="" width="22" height="22">
+            </a>
+            <a class="lien-reseau" href="https://facebook.com" aria-label="Burger House sur Facebook" target="_blank" rel="noopener">
+              <img src="images/ic_baseline-facebook.svg" alt="" width="22" height="22">
+            </a>
+            <a class="lien-reseau" href="https://github.com" aria-label="Burger House sur GitHub" target="_blank" rel="noopener">
+              <img src="images/mdi_github.svg" alt="" width="22" height="22">
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

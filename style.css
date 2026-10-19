@@ -1,0 +1,684 @@
+/* ==========================================================================
+   BURGER HOUSE — STYLE DU SITE VITRINE COMPLET
+   ========================================================================== */
+
+/* ===== 1. RÉGLAGES DE BASE ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #3d2514;
+  background-color: #ffffff;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ===== 2. EN-TÊTE : NAVIGATION & HERO ===== */
+.entete {
+  background-color: #ffc045;
+  background-image: url("images/bg-food.jpg");
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+}
+
+.nav-logo-lien {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo {
+  height: 40px;
+  width: auto;
+}
+
+.nav-droite {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.nav-commande-texte {
+  display: none; /* Masqué sur mobile */
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #3d2514;
+}
+
+.nav-boutons {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-nav {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 16px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 4px;
+  transition: opacity 0.2s;
+}
+
+.btn-inscription {
+  background-color: #ffc045;
+  color: #3d2514;
+  border: 2px solid #3d2514;
+}
+
+.btn-connexion {
+  background-color: #3d2514;
+  color: #ffffff;
+}
+
+.btn-nav:hover {
+  opacity: 0.85;
+}
+
+/* Hero (adapté de l'exercice 2) */
+.hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 20px 48px;
+  text-transform: uppercase;
+}
+
+.hero-accroche {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 0 16px;
+}
+
+.hero-titre {
+  font-family: "Alfa Slab One", Georgia, serif;
+  font-weight: normal;
+  line-height: 1;
+  text-shadow: 3px 3px #fee7ba;
+  margin: 0 0 32px;
+}
+
+.titre-burger {
+  display: block;
+  font-size: 60px;
+}
+
+.titre-house {
+  display: block;
+  font-size: 44px;
+}
+
+.titre-collect {
+  display: block;
+  font-size: 28px;
+  margin-top: 8px;
+}
+
+.rouge {
+  color: #bf2222;
+}
+
+.bouton-hero {
+  display: block;
+  background-color: #3d2514;
+  color: #ffffff;
+  text-align: center;
+  font-weight: bold;
+  padding: 16px 24px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.bouton-hero:hover {
+  background-color: #5c3a21;
+}
+
+.hero-burger {
+  display: block;
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  margin: 32px auto 0;
+}
+
+/* ===== 3. SECTION POPULAIRES (GRILLE) ===== */
+.populaires {
+  padding: 60px 20px;
+  max-width: 1064px;
+  margin: 0 auto;
+}
+
+.grille-populaires {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.carte-populaire {
+  min-height: 180px;
+  border-radius: 6px;
+  padding: 28px;
+  display: flex;
+  align-items: flex-end;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.carte-populaire::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.2) 60%);
+}
+
+.populaire-contenu {
+  position: relative;
+  z-index: 1;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.populaire-soustitre {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.populaire-titre {
+  font-size: 18px;
+  font-weight: 900;
+  margin: 4px 0 0;
+}
+
+.carte-populaire-1 { background-image: url("images/LastProducts-1.jpg"); }
+.carte-populaire-2 { background-image: url("images/LastProducts-2.jpg"); }
+.carte-populaire-3 { background-image: url("images/LastProducts-3.jpg"); }
+
+/* ===== 4. SECTION MENU ===== */
+.menu {
+  padding: 60px 0;
+}
+
+.menu-entete {
+  text-align: center;
+  padding: 0 20px;
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+.etiquette-jaune {
+  display: inline-block;
+  background-color: #ffc045;
+  color: #3d2514;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 8px 20px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+
+.titre-section {
+  font-family: "Alfa Slab One", Georgia, serif;
+  font-size: 28px;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin: 0 0 16px;
+  color: #3d2514;
+}
+
+.menu-intro {
+  font-size: 16px;
+  color: #4b5563;
+  margin: 0;
+}
+
+.grille-menu {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+.carte-plat {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.plat-img {
+  width: 100%;
+  height: 312px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.plat-nom {
+  font-size: 22px;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin: 20px 0 8px;
+}
+
+.plat-desc {
+  font-size: 15px;
+  color: #4b5563;
+  max-width: 420px;
+  margin: 0 0 20px;
+}
+
+.bouton-commande {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 24px;
+  background-color: #bf2222;
+  color: #ffffff;
+  font-family: "Alfa Slab One", Georgia, serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.2s;
+}
+
+.bouton-commande:hover {
+  background-color: #9e1b1b;
+}
+
+/* ===== 5. SECTION ÉVÉNEMENT ===== */
+.evenement {
+  padding: 40px 20px;
+}
+
+.carte-evenement {
+  background-color: #ffffff;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  padding: 24px;
+  max-width: 1152px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.evenement-etiquette {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+.evenement-titre {
+  font-family: "Alfa Slab One", Georgia, serif;
+  font-size: 24px;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #3d2514;
+  margin: 0 0 16px;
+}
+
+.evenement-desc {
+  font-size: 15px;
+  color: #1e293b;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.evenement-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* ===== 6. SECTION RÉSERVATION ===== */
+.reservation {
+  padding: 60px 20px;
+  background-color: #fffaf0;
+}
+
+.reservation-conteneur {
+  max-width: 688px;
+  margin: 0 auto;
+}
+
+.reservation-entete {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.reservation-surtitre {
+  display: block;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #4b5563;
+  margin-bottom: 4px;
+}
+
+.reservation-titre {
+  font-family: "Alfa Slab One", Georgia, serif;
+  font-size: 28px;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin: 0;
+  color: #3d2514;
+}
+
+.formulaire-reservation {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.champ-groupe label {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  color: #3d2514;
+}
+
+.champ-groupe input {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 16px;
+  border: 1px solid #9ca3af;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+.champ-groupe input:focus-visible {
+  outline: 2px solid #bf2222;
+  border-color: #bf2222;
+}
+
+.champ-bouton {
+  display: flex;
+  align-items: flex-end;
+}
+
+.bouton-reserver {
+  width: 100%;
+  min-height: 48px;
+  background-color: #bf2222;
+  color: #ffffff;
+  font-family: "Alfa Slab One", Georgia, serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.2s;
+}
+
+.bouton-reserver:hover {
+  background-color: #9e1b1b;
+}
+
+/* ===== 7. PIED DE PAGE ===== */
+.footer {
+  background-image: url("images/bg-footer.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+}
+
+.footer-fond {
+  background-color: rgba(0, 0, 0, 0.78);
+  padding: 60px 20px 30px;
+}
+
+.footer-contenu {
+  max-width: 1152px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.footer-logo {
+  height: 48px;
+  width: auto;
+  margin-bottom: 16px;
+}
+
+.footer-texte {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #e5e7eb;
+  margin: 0;
+  max-width: 500px;
+}
+
+.footer-coordonnees {
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1.8;
+}
+
+.footer-coordonnees a:hover {
+  text-decoration: underline;
+}
+
+.footer-bas {
+  max-width: 1152px;
+  margin: 40px auto 0;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.copyright {
+  font-size: 12px;
+  color: #9ca3af;
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.footer-reseaux {
+  display: flex;
+  gap: 12px;
+}
+
+.lien-reseau {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  transition: transform 0.2s;
+}
+
+.lien-reseau:hover {
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   VERSION GRAND ÉCRAN (MIN-WIDTH: 1024PX)
+   ========================================================================== */
+@media (min-width: 1024px) {
+  /* Navigation */
+  .nav {
+    padding: 32px 64px 0;
+    max-width: 1300px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .nav-logo {
+    height: 56px;
+  }
+
+  .nav-droite {
+    align-items: flex-end;
+  }
+
+  .nav-commande-texte {
+    display: inline-flex;
+    font-size: 15px;
+  }
+
+  .btn-nav {
+    font-size: 14px;
+  }
+
+  /* Hero */
+  .hero {
+    flex-direction: row;
+    align-items: center;
+    gap: 48px;
+    padding: 48px 64px 80px;
+    max-width: 1300px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .hero-texte,
+  .hero-burger {
+    flex: 1;
+  }
+
+  .titre-burger { font-size: 96px; }
+  .titre-house { font-size: 60px; display: inline-block; }
+  .titre-collect { font-size: 36px; display: inline-block; margin-left: 12px; }
+
+  .bouton-hero {
+    max-width: 400px;
+  }
+
+  .hero-burger {
+    max-width: 560px;
+    margin: 0;
+  }
+
+  /* Populaires */
+  .grille-populaires {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px 16px;
+  }
+
+  .carte-populaire-1 {
+    grid-row: span 2;
+    min-height: 410px;
+  }
+
+  .populaire-soustitre { font-size: 16px; }
+  .populaire-titre { font-size: 24px; }
+
+  /* Menu */
+  .titre-section { font-size: 44px; }
+
+  .grille-menu {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 0 40px;
+  }
+
+  .plat-img {
+    height: 382px;
+  }
+
+  /* Événement */
+  .carte-evenement {
+    flex-direction: row;
+    align-items: center;
+    padding: 40px;
+    gap: 48px;
+  }
+
+  .evenement-texte {
+    flex: 1;
+  }
+
+  .evenement-titre { font-size: 32px; }
+  .evenement-desc { font-size: 17px; }
+
+  .evenement-img {
+    width: 48%;
+    height: 320px;
+  }
+
+  /* Réservation */
+  .reservation-titre { font-size: 40px; }
+
+  .formulaire-reservation {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .champ-groupe input {
+    padding: 16px 20px;
+  }
+
+  /* Footer */
+  .footer-contenu {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .footer-bas {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
